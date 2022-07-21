@@ -58,14 +58,20 @@ basicCC <- ggplot(kRdata1,aes(x=result,y=prcnt*100,fill=Sex))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-Based on the frequency graph, it looks like more males died than females. Looking at the percentage graph, the percentage of males who died is almost double the percentage of females who died. So far we can't tell if the sex is affecting our data, so we keep analyzing using numerical data.
+Based on the frequency graph, it looks like more males died than females ,even though we have more females than males . Looking at the percentage graph, the percentage of males who died is almost double the percentage of females who died. So far we can't tell if the sex is affecting our data, so we keep analyzing using numerical data.
 
 
-
-
-
-  
 ## Numerical results
+
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Based on the first table, 64% of the dead people were males and 36% were females so the percentage of males is almost double the one of females.
+Moving on to the next table, 1.4% of the females died while 3% of the males died, this data doesn't really help us that much because it's based on the numbers of males and females and not the dead numbers.
+
 
 
 ## Inferential results 
