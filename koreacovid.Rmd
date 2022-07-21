@@ -76,8 +76,20 @@ Moving on to the next table, 1.4% of the females died while 3% of the males died
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 
+Based on the p value of the fisher's exact test which is 0.0009 < 0.5 , this proves that there is a significant statistical difference, meaning that death isn't dependent from sex ( more males died than females).
 
 ## Conclusions
+
+Starting with the graphical analysis, we saw in the frequency graph that there are more males than females in the dead group.Then moving on to the numerical analysis it showed that there were more males than females in the dead group( that was from the table that counted the percentage of males and females in the dead group), the second table didn't help much. When obtaining the inferential data, based on the fisher's exact test's p value we concluded that there is a significant difference between males and females, meaning that sex does affect the death numbers.
+
+
+
+
 
